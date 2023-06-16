@@ -4,7 +4,7 @@ import TrackIcon from "@/assets/icons/track.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-const TopHeaderElement = () => {
+export const TopHeaderElement = () => {
   return (
     <div className="container py-6 flex flex-col items-end md:flex-row md:items-center justify-between font-normal text-sm">
       <p className="mb-4 md:mb-0 text-black">
@@ -24,5 +24,3 @@ const TopHeaderElement = () => {
     </div>
   );
 };
-
-export default TopHeaderElement;
