@@ -1,6 +1,6 @@
 import TopHeaderElement from "@/components/sections/topHeaderElement";
 
-export default function Home() 
+export default function Home() {
   return (
     <div>
       <TopHeaderElement />
