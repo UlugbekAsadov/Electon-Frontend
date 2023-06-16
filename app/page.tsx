@@ -1,3 +1,9 @@
+import { TopHeaderElement } from "@/components/sections";
+
 export default function Home() {
-  return <h1>Initial Project</h1>;
+  return (
+    <div>
+      <TopHeaderElement />
+    </div>
+  );
 }
