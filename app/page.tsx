@@ -1,4 +1,4 @@
-import TopHeaderElement from "@/components/common/topHeaderElement";
+import TopHeaderElement from "@/components/sections/topHeaderElement";
 
 export default function Home() {
   return (
