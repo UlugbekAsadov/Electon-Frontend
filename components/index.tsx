@@ -1,1 +1,1 @@
-export * from "./sections/topHeaderElement";
+export * from "./sections/top-header-element";
