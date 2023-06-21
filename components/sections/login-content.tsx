@@ -1,9 +1,8 @@
 import Link from "next/link";
 import React from "react";
-
-// import image
-import UserImg from "@/assets/image/Saly-14.png";
 import Image from "next/image";
+
+import UserImg from "@/assets/image/Saly-14.png";
 
 const LoginContent = () => {
   return (
@@ -16,7 +15,7 @@ const LoginContent = () => {
       </p>
       <p className="w-[308px] mb-14 md:mb-0">
         If you don’t have an account register You can{" "}
-        <Link className="text-blue-700" href={"/"}>
+        <Link className="text-blue-700" href={"/register"}>
           Register here
         </Link>{" "}
         !
