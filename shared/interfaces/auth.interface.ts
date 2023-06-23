@@ -3,10 +3,10 @@ export interface IRegisterForm {
   lastName: string;
   email?: string;
   password: string;
-  phoneNumber: number;
+  phoneNumber: string;
 }
 
 export interface ILoginForm {
-  phoneNumber: number;
+  phoneNumber: string;
   password: string;
 }

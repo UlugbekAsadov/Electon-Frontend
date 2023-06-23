@@ -3,10 +3,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "../common/button";
 import { ILoginForm } from "@/shared/interfaces";
+import { Input } from "../common/input";
 
 const LoginForm = () => {
   const [credintials, setCredintials] = useState<ILoginForm>({
-    phoneNumber: 998,
+    phoneNumber: "+998",
     password: "",
   });
 
@@ -23,17 +24,17 @@ const LoginForm = () => {
       <h2 className="hidden md:block md:text-3xl font-medium mb-7">Sign In</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-9">
-          <input
-            className="login__input"
+          <Input
+            value={credintials.phoneNumber}
             name="phoneNumber"
-            type="number"
+            type="text"
             onChange={handlerChangeCredintials}
             placeholder="Phonenumber"
+            maxLength={16}
           />
         </div>
         <div className="mb-4">
-          <input
-            className="login__input"
+          <Input
             name="password"
             type="password"
             onChange={handlerChangeCredintials}
