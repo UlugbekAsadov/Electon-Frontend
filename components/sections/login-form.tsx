@@ -1,9 +1,14 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { Button } from "../common/button";
+import { ILoginForm } from "@/shared/interfaces";
 
 const LoginForm = () => {
-  const [credintials, setCredintials] = useState({ email: "", password: "" });
+  const [credintials, setCredintials] = useState<ILoginForm>({
+    phoneNumber: 998,
+    password: "",
+  });
 
   const handlerChangeCredintials = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCredintials({ ...credintials, [e.target.name]: e.target.value });
@@ -20,18 +25,16 @@ const LoginForm = () => {
         <div className="mb-9">
           <input
             className="login__input"
-            name="email"
-            id="email"
-            type="email"
+            name="phoneNumber"
+            type="number"
             onChange={handlerChangeCredintials}
-            placeholder="Enter email or user name"
+            placeholder="Phonenumber"
           />
         </div>
         <div className="mb-4">
           <input
             className="login__input"
             name="password"
-            id="password"
             type="password"
             onChange={handlerChangeCredintials}
             placeholder="Password"
@@ -45,14 +48,11 @@ const LoginForm = () => {
           Forgot password?
         </Link>
 
-        <div className="flex items-center justify-between">
-          <button
-            className="bg-orange-500 hover:opacity-80 w-full text-white py-5 leading-6 rounded-full focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Login
-          </button>
-        </div>
+        <Button
+          className="w-full rounded-full"
+          variant="PRIMARY"
+          title="Login"
+        />
       </form>
     </div>
   );
