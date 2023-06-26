@@ -24,7 +24,7 @@ const RegisterForm = () => {
     <div className="w-full md:max-w-[370px]">
       <h2 className="hidden md:block md:text-3xl font-medium mb-7">Sign Up</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-4 flex gap-4 justify-between items-center">
+        <div className="mb-2 flex gap-4 justify-between items-center">
           <Input
             name="firstName"
             value={credintials.firstName}
@@ -41,7 +41,7 @@ const RegisterForm = () => {
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-2">
           <Input
             value={credintials.phoneNumber}
             name="phoneNumber"
@@ -52,7 +52,7 @@ const RegisterForm = () => {
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-2">
           <Input
             value={credintials.email}
             name="email"
@@ -62,7 +62,7 @@ const RegisterForm = () => {
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-2">
           <Input
             name="password"
             type="password"
@@ -71,11 +71,7 @@ const RegisterForm = () => {
           />
         </div>
 
-        <Button
-          className="w-full rounded-full"
-          variant="PRIMARY"
-          title={"Register"}
-        />
+        <Button className="w-full" variant="PRIMARY" title={"Register"} />
       </form>
     </div>
   );

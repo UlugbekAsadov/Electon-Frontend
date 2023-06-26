@@ -24,7 +24,7 @@ const AuthContent = ({ variant }: IProps) => {
         <br />
         You can{" "}
         <Link
-          className="text-blue-700"
+          className="text-indigo-500"
           href={`/${variant == AuthTypes.Login ? "register" : "login"}`}
         >
           {variant == AuthTypes.Login ? "Register" : "Login"} here

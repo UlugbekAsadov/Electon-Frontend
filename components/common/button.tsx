@@ -22,19 +22,19 @@ export const Button = ({
   const getButtonStyles = () => {
     switch (variant) {
       case "PRIMARY":
-        return "bg-orange-500 text-white";
+        return "bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700 active:shadow-primaryInput";
       case "SECONDARY":
-        return "bg-blue-600 text-white";
+        return "bg-cyan-600 text-white hover:bg-cyan-700 active:bg-cyan-800 active:shadow-secondary";
       case "OUTLINE":
-        return "border border-blue-600 text-blue-600";
+        return "border border-cyan-600 text-cyan-600 active:shadow-secondary";
       case "DANGER":
-        return "border border-red-500 text-red-500";
+        return "border border-red-500 text-red-500 active:shadow-primaryInputError ";
     }
   };
 
   return (
     <button
-      className={`${getButtonStyles()} ${className}  py-3 px-7 md:py-5 md:px-14 rounded-3xl md:text-base text-sm font-bold cursor-pointer ${
+      className={`${getButtonStyles()} ${className} transition  py-3 px-7 md:py-5 md:px-14 rounded-xl md:text-base text-sm font-bold cursor-pointer ${
         isLoading && "opacity-50 cursor-default"
       }`}
       onClick={onClick}

@@ -22,35 +22,34 @@ const LoginForm = () => {
   return (
     <div className="w-full md:max-w-[370px]">
       <h2 className="hidden md:block md:text-3xl font-medium mb-7">Sign In</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-9">
-          <Input
-            value={credintials.phoneNumber}
-            name="phoneNumber"
-            type="text"
-            onChange={handlerChangeCredintials}
-            placeholder="Phonenumber"
-            maxLength={16}
-          />
-        </div>
-        <div className="mb-4">
-          <Input
-            name="password"
-            type="password"
-            onChange={handlerChangeCredintials}
-            placeholder="Password"
-          />
-        </div>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <Input
+          value={credintials.phoneNumber}
+          name="phoneNumber"
+          type="text"
+          onChange={handlerChangeCredintials}
+          placeholder="Phonenumber"
+          maxLength={13}
+        />
+        <Input
+          name="password"
+          type="password"
+          onChange={handlerChangeCredintials}
+          placeholder="Password"
+          value={credintials.password}
+          isError={Boolean(credintials.password.length) && credintials.password.length < 8}
+          errorText="Minimum 8"
+        />
 
         <Link
-          className="block text-gray-500 text-sm text-right mb-11 md:mb-16"
+          className="block text-gray-500 text-sm text-right mb-4 md:mb-6"
           href="/"
         >
           Forgot password?
         </Link>
 
         <Button
-          className="w-full rounded-full"
+          className="w-full"
           variant="PRIMARY"
           title="Login"
         />
