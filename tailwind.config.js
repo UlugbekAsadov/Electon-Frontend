@@ -5,23 +5,31 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    boxShadow: {
+      primaryInput: "0 0 0px 5px #EDA41520",
+      secondary: "0 0 0px 5px #155e7520",
+      primaryInputError: "0 0 0px 5px #C3313120",
     },
     colors: {
       black: "#292D32",
-      blue: {
-        600: "#316887",
+      cyan: {
+        600: "#0e7490",
+        700: "#316887",
+        800: "#155e75",
       },
+      indigo: {
+        500: "#4D47C3",
+      },
+      gray: { 50: "#f9fafb", 100: "#f3f4f6", 500: "#B0B0B0" },
       orange: {
         500: "#EDA415",
+        600: "#fb923c",
+        700: "#f97316",
       },
       red: {
+        100: "#fee2e2",
         500: "#C33131",
       },
       white: "#fff",
