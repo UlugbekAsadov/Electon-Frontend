@@ -45,7 +45,7 @@ export const Input = (props: IProps) => {
         <input
           {...props}
           type={getInputType()}
-          className="focus:outline-none outline-none  w-full rounded-lg py-5"
+          className="focus:outline-none outline-none  w-full rounded-lg py-3"
         />
         {props.type === "password" && (
           <div className="ml-2">

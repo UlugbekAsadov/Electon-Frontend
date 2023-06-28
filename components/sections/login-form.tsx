@@ -42,7 +42,7 @@ const LoginForm = () => {
         />
 
         <Link
-          className="block text-gray-500 text-sm text-right mb-4 md:mb-6"
+          className="block text-gray-500 text-sm text-right mb-2 md:mb-4"
           href="/"
         >
           Forgot password?
