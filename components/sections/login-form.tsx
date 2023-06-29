@@ -32,12 +32,16 @@ const LoginForm = () => {
           maxLength={13}
         />
         <Input
+          value={credintials.password}
           name="password"
           type="password"
           onChange={handlerChangeCredintials}
           placeholder="Password"
-          value={credintials.password}
-          isError={Boolean(credintials.password.length) && credintials.password.length < 8}
+          autoComplete="off"
+          isError={
+            Boolean(credintials.password.length) &&
+            credintials.password.length < 8
+          }
           errorText="Minimum 8"
         />
 
@@ -48,11 +52,7 @@ const LoginForm = () => {
           Forgot password?
         </Link>
 
-        <Button
-          className="w-full"
-          variant="PRIMARY"
-          title="Login"
-        />
+        <Button className="w-full" variant="PRIMARY" title="Login" />
       </form>
     </div>
   );
