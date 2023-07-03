@@ -10,9 +10,8 @@ interface IProps extends InputProps {
   errorText?: string;
 }
 
-export const Input = (props: IProps) => {
+export const Input = ({ className, isError, errorText, ...props }: IProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-
   const getInputType = () => {
     if (props.type === "password") {
       return isVisible ? "text" : "password";
@@ -22,7 +21,7 @@ export const Input = (props: IProps) => {
   };
 
   const getStyles = () => {
-    if (props.isError) {
+    if (isError) {
       return `focus:border-red-500 focus-within:border-red-500 focus-within:shadow-primaryInputError`;
     }
 
@@ -32,14 +31,12 @@ export const Input = (props: IProps) => {
   return (
     <div>
       <div
-        className={`${props.className} ${getStyles()} ${
-          props.isError
+        className={`${className} ${getStyles()} ${
+          isError
             ? "border-red-500 opacity-100"
             : "border-gray-500 border-opacity-50"
         } ${
-          props.disabled && (
-            "opacity-40 pointer-events-none"
-          )
+          props.disabled && "opacity-40 pointer-events-none"
         } flex items-center px-5 border-2 transition-all ease-in-out rounded-xl focus-within:border-opacity-100`}
       >
         <input
@@ -68,10 +65,10 @@ export const Input = (props: IProps) => {
       <label
         htmlFor={props.id}
         className={`text-red-500 text-xs ml-2 opacity-0 ${
-          props.isError && "opacity-100"
+          isError && "opacity-100"
         }`}
       >
-        {props.errorText}
+        {errorText}
       </label>
     </div>
   );
